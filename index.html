@@ -42,10 +42,10 @@
                 
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" onclick="showView('book-view')" class="hover:text-sky-300 transition text-sm font-medium">Reservar</a>
-                    <a href="#" onclick="showView('trips-view')" class="hover:text-sky-300 transition text-sm font-medium">Mis Viajes</a>
-                    <a href="#" onclick="showView('checkin-view')" class="hover:text-sky-300 transition text-sm font-medium">Check-in</a>
-                    <a href="#" onclick="showView('status-view')" class="hover:text-sky-300 transition text-sm font-medium">Estado de vuelo</a>
+                    <button onclick="showView('book-view')" class="text-white hover:text-sky-300 transition text-sm font-medium">Reservar</button>
+                    <button onclick="showView('trips-view')" class="text-white hover:text-sky-300 transition text-sm font-medium">Mis Viajes</button>
+                    <button onclick="showView('checkin-view')" class="text-white hover:text-sky-300 transition text-sm font-medium">Check-in</button>
+                    <button onclick="showView('status-view')" class="text-white hover:text-sky-300 transition text-sm font-medium">Estado de vuelo</button>
                     
                     <!-- Login / Profile (Desktop) -->
                     <button id="nav-login-btn" onclick="openLoginModal()" class="bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-bold transition shadow-md">Iniciar Sesión</button>
@@ -68,10 +68,10 @@
         <!-- Mobile Nav Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-blue-700 shadow-inner">
             <div class="px-4 pt-2 pb-4 space-y-1">
-                <a href="#" onclick="showView('book-view')" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition">Reservar</a>
-                <a href="#" onclick="showView('trips-view')" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition">Mis Viajes</a>
-                <a href="#" onclick="showView('checkin-view')" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition">Check-in</a>
-                <a href="#" onclick="showView('status-view')" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition">Estado de vuelo</a>
+                <button onclick="showView('book-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Reservar</button>
+                <button onclick="showView('trips-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Mis Viajes</button>
+                <button onclick="showView('checkin-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Check-in</button>
+                <button onclick="showView('status-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Estado de vuelo</button>
                 
                 <div class="mt-4 pt-4 border-t border-blue-700">
                     <!-- Login / Profile (Mobile) -->
@@ -140,7 +140,7 @@
                             <span class="text-xs text-gray-500 font-bold block uppercase mb-1">Destino</span>
                             <div class="flex items-center relative">
                                 <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
-                                <select class="w-full bg-transparent outline-none font-semibold text-gray-800 appearance-none cursor-pointer">
+                                <select id="flight-search-dest" class="w-full bg-transparent outline-none font-semibold text-gray-800 appearance-none cursor-pointer">
                                     <option value="" disabled selected>¿A dónde viajas?</option>
                                     <option value="HBD">Happy Birthday (HBD)</option>
                                     <option value="CUN">Cancún (CUN)</option>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-span-1">
-                            <button class="w-full h-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center py-4 md:py-0">
+                            <button id="btn-buscar-vuelos" onclick="executeFlightSearch()" class="w-full h-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center py-4 md:py-0 border-2 border-transparent">
                                 <i class="fa-solid fa-magnifying-glass mr-2"></i> Buscar Vuelos
                             </button>
                         </div>
@@ -1234,5 +1234,31 @@
     function simulateScanHbdDirect() {
         closeHbdModal();
         showView('ticket-view');
+    }
+
+    function executeFlightSearch() {
+        const select = document.getElementById('flight-search-dest');
+        const btn = document.getElementById('btn-buscar-vuelos');
+        
+        // Si no selecciona nada, pinta el borde de rojo por 1 segundo
+        if(!select || select.value === "") {
+            btn.classList.add('border-red-400', 'text-red-200');
+            btn.classList.remove('border-transparent');
+            setTimeout(() => {
+                btn.classList.remove('border-red-400', 'text-red-200');
+                btn.classList.add('border-transparent');
+            }, 1500);
+            return;
+        }
+
+        // Abre la ventana correcta según lo que se elija
+        if (select.value === 'HBD') openHbdModal();
+        else if (select.value === 'CUN') openFlightModal('CUN', 'Cancún', 'AM102', '30 de Noviembre', '09:00', '08:20', 'Boeing 737 MAX', '14-B', '1 Maleta (25kg)');
+        else if (select.value === 'MAD') openFlightModal('MAD', 'Madrid', 'IB6400', '10 de Diciembre', '19:30', '18:40', 'Airbus A350', '22-C', '1 Maleta (25kg)');
+        else if (select.value === 'NRT') openFlightModal('NRT', 'Tokio', 'AM058', '27 de Noviembre', '23:30', '22:40', 'Boeing 787 Dreamliner', '15-J', '2 Maletas (23kg c/u)');
+        else if (select.value === 'CDG') openFlightModal('CDG', 'París', 'AM003', '20 de Diciembre', '22:00', '21:10', 'Boeing 787 Dreamliner', '18-J', '1 Maleta (25kg)');
+        else if (select.value === 'JFK') openFlightModal('JFK', 'Nueva York', 'AM404', '05 de Diciembre', '07:45', '06:50', 'Boeing 737 MAX', '12-F', '1 Maleta (23kg)');
+        else if (select.value === 'FCO') openFlightModal('FCO', 'Roma', 'AM070', '15 de Diciembre', '18:15', '17:25', 'Boeing 787 Dreamliner', '25-A', '1 Maleta (25kg)');
+        else if (select.value === 'SYD') openFlightModal('SYD', 'Sídney', 'AM092', '05 de Enero', '23:55', '23:05', 'Airbus A350', '14-J', '2 Maletas (23kg c/u)');
     }
 </script>
