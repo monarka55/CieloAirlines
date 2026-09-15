@@ -68,14 +68,14 @@
         <!-- Mobile Nav Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-blue-700 shadow-inner">
             <div class="px-4 pt-2 pb-4 space-y-1">
-                <button onclick="showView('book-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Reservar</button>
-                <button onclick="showView('trips-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Mis Viajes</button>
-                <button onclick="showView('checkin-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Check-in</button>
-                <button onclick="showView('status-view')" class="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Estado de vuelo</button>
+                <button onclick="showView('book-view')" class="w-full text-left block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Reservar</button>
+                <button onclick="showView('trips-view')" class="w-full text-left block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Mis Viajes</button>
+                <button onclick="showView('checkin-view')" class="w-full text-left block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Check-in</button>
+                <button onclick="showView('status-view')" class="w-full text-left block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-blue-700 transition">Estado de vuelo</button>
                 
                 <div class="mt-4 pt-4 border-t border-blue-700">
                     <!-- Login / Profile (Mobile) -->
-                    <button id="mobile-login-btn" onclick="openLoginModal(); toggleMobileMenu();" class="w-full bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-bold transition shadow-md flex justify-center items-center">
+                    <button id="mobile-login-btn" onclick="openLoginModal(); toggleMobileMenu();" class="w-full bg-sky-500 hover:bg-sky-400 text-white px-4 py-3 rounded-lg text-sm font-bold transition shadow-md flex justify-center items-center">
                         <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Iniciar Sesión
                     </button>
                     
@@ -215,7 +215,7 @@
 
                     <!-- Vuelo 2 Cancún -->
                     <div onclick="openFlightModal('CUN', 'Cancún', 'AM102', '30 de Noviembre', '09:00', '08:20', 'Boeing 737 MAX', '14-B', '1 Maleta (25kg)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?q=80&w=800&auto=format&fit=crop" alt="Cancún" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?q=80&w=800&auto=format&fit=crop" alt="Cancún" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-sky-600 bg-sky-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -236,7 +236,7 @@
 
                     <!-- Vuelo 3 Madrid -->
                     <div onclick="openFlightModal('MAD', 'Madrid', 'IB6400', '10 de Diciembre', '19:30', '18:40', 'Airbus A350', '22-C', '1 Maleta (25kg)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=800&auto=format&fit=crop" alt="Madrid" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=800&auto=format&fit=crop" alt="Madrid" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-sky-600 bg-sky-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -257,7 +257,7 @@
                     
                     <!-- Vuelo 4 Japón -->
                     <div onclick="openFlightModal('NRT', 'Tokio', 'AM058', '27 de Noviembre', '23:30', '22:40', 'Boeing 787 Dreamliner', '15-J', '2 Maletas (23kg c/u)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=800&auto=format&fit=crop" alt="Japón" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=800&auto=format&fit=crop" alt="Japón" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-purple-600 bg-purple-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -278,7 +278,7 @@
 
                     <!-- Vuelo 5 París -->
                     <div onclick="openFlightModal('CDG', 'París', 'AM003', '20 de Diciembre', '22:00', '21:10', 'Boeing 787 Dreamliner', '18-J', '1 Maleta (25kg)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt="París, Francia" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt="París, Francia" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-sky-600 bg-sky-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -299,7 +299,7 @@
 
                     <!-- Vuelo 6 Nueva York -->
                     <div onclick="openFlightModal('JFK', 'Nueva York', 'AM404', '05 de Diciembre', '07:45', '06:50', 'Boeing 737 MAX', '12-F', '1 Maleta (23kg)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800&auto=format&fit=crop" alt="Nueva York" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800&auto=format&fit=crop" alt="Nueva York" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-sky-600 bg-sky-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -320,7 +320,7 @@
 
                     <!-- Vuelo 7 Roma -->
                     <div onclick="openFlightModal('FCO', 'Roma', 'AM070', '15 de Diciembre', '18:15', '17:25', 'Boeing 787 Dreamliner', '25-A', '1 Maleta (25kg)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop" alt="Roma" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=800&auto=format&fit=crop" alt="Roma" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-sky-600 bg-sky-100 px-2 py-1 rounded">Vuelo Directo</span>
@@ -341,7 +341,7 @@
 
                     <!-- Vuelo 8 Sídney -->
                     <div onclick="openFlightModal('SYD', 'Sídney', 'AM092', '05 de Enero', '23:55', '23:05', 'Airbus A350', '14-J', '2 Maletas (23kg c/u)')" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=800&auto=format&fit=crop" alt="Sídney" class="w-full h-40 object-cover">
+                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=800&auto=format&fit=crop" alt="Sídney" class="w-full h-40 object-cover bg-gray-200">
                         <div class="p-5">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-xs font-bold text-orange-600 bg-orange-100 px-2 py-1 rounded">1 Escala</span>
@@ -367,7 +367,6 @@
         <!-- MODAL ESPECIAL HBD -->
         <div id="hbd-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
             <div class="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl border-4 border-pink-300">
-                <!-- Encabezado -->
                 <div class="hbd-gradient p-4 text-white relative">
                     <button onclick="closeHbdModal()" class="absolute top-3 right-3 text-white/70 hover:text-white transition bg-black/20 rounded-full w-7 h-7 flex items-center justify-center z-10">
                         <i class="fa-solid fa-xmark text-sm"></i>
@@ -378,7 +377,6 @@
                 </div>
                 
                 <div class="p-4 space-y-3.5">
-                    <!-- Ruta -->
                     <div class="flex justify-between items-center bg-pink-50 rounded-2xl p-3 border border-pink-100">
                         <div class="text-center">
                             <p class="text-xl font-black text-gray-800">MEX</p>
@@ -396,7 +394,6 @@
                         </div>
                     </div>
 
-                    <!-- Estado Desconectado -->
                     <div id="modal-hbd-unbooked" class="space-y-3">
                         <div class="grid grid-cols-2 gap-3">
                             <div class="bg-gray-50 p-2 rounded-xl border border-gray-100 opacity-60 text-center">
@@ -413,7 +410,6 @@
                         </div>
                     </div>
 
-                    <!-- Estado Conectado -->
                     <div id="modal-hbd-booked" class="hidden space-y-3">
                         <div class="grid grid-cols-2 gap-3">
                             <div class="bg-pink-50 p-2.5 rounded-xl border border-pink-200">
@@ -439,7 +435,6 @@
                         </div>
                     </div>
 
-                    <!-- Bloque de Info de Destino y Vuelo HBD -->
                     <div class="space-y-2">
                         <div class="bg-pink-50/80 p-3 rounded-xl border border-pink-100 flex items-start gap-2.5">
                             <i class="fa-solid fa-map-location-dot text-pink-500 mt-0.5 text-sm"></i>
@@ -457,7 +452,6 @@
                         </div>
                     </div>
 
-                    <!-- Botones -->
                     <button id="btn-hbd-unbooked" onclick="openLoginModal()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 text-sm rounded-xl transition shadow-lg flex items-center justify-center">
                         <i class="fa-solid fa-user-circle mr-2"></i> Iniciar Sesión para ver
                     </button>
@@ -472,7 +466,6 @@
         <!-- MODAL GENÉRICO DE INFORMACIÓN DE VUELO -->
         <div id="generic-flight-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
             <div class="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl">
-                <!-- Encabezado Modal Genérico -->
                 <div class="bg-blue-900 p-4 text-white relative">
                     <button onclick="closeFlightModal()" class="absolute top-3 right-3 text-white/70 hover:text-white transition bg-black/20 rounded-full w-7 h-7 flex items-center justify-center z-10">
                         <i class="fa-solid fa-xmark text-sm"></i>
@@ -488,14 +481,11 @@
                     </div>
                 </div>
 
-                <!-- Imagen Destino Dinámica -->
                 <div class="w-full h-24 bg-gray-200">
                     <img id="mod-dest-banner" src="" alt="Portada Destino" class="w-full h-full object-cover">
                 </div>
 
-                <!-- Detalles del Itinerario -->
                 <div class="p-4 space-y-4">
-                    <!-- Ruta y Horario -->
                     <div class="flex justify-between items-center bg-gray-50 rounded-2xl p-3 border border-gray-100">
                         <div class="text-center">
                             <p class="text-[10px] text-gray-500 font-medium mb-0.5">Origen</p>
@@ -516,7 +506,6 @@
                         </div>
                     </div>
 
-                    <!-- Datos Operativos -->
                     <div class="grid grid-cols-2 gap-3">
                         <div class="bg-gray-50 p-2.5 rounded-xl border border-gray-100">
                             <p class="text-[9px] text-gray-500 uppercase tracking-wide font-bold mb-0.5"><i class="fa-solid fa-door-open mr-1"></i>Abordaje</p>
@@ -536,7 +525,6 @@
                         </div>
                     </div>
 
-                    <!-- Bloque de Info de Destino y Vuelo -->
                     <div class="space-y-2.5">
                         <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100 flex items-start gap-2.5">
                             <i class="fa-solid fa-map-location-dot text-blue-500 mt-0.5 text-sm"></i>
@@ -565,7 +553,6 @@
             
             <h2 class="text-white text-2xl font-bold mb-8 text-center z-10 px-4">Escanea tu pase de abordar</h2>
             
-            <!-- Simulador de cámara/lector -->
             <div class="relative w-72 h-72 border-4 border-dashed border-gray-400 rounded-3xl overflow-hidden bg-gray-900 flex items-center justify-center shadow-2xl">
                 <i class="fa-solid fa-qrcode text-gray-700 text-8xl opacity-50"></i>
                 <div class="scanner-line"></div>
@@ -573,32 +560,26 @@
             
             <p class="text-gray-400 mt-8 text-sm text-center px-6">Centra el código QR o código de barras de tu pase impreso o digital en el recuadro.</p>
             
-            <!-- Mensaje de Error (si no ha iniciado sesión) -->
             <div id="scanner-error-msg" class="hidden mt-4 bg-red-500/20 border border-red-500 text-red-100 px-4 py-3 rounded-xl text-sm text-center font-semibold max-w-xs transition-opacity duration-300">
                 <i class="fa-solid fa-triangle-exclamation mr-1"></i> No se encontró el pase. Por favor, inicie sesión primero.
             </div>
 
-            <!-- Botón simulador de escaneo exitoso -->
             <button onclick="scanSuccess()" class="mt-8 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold opacity-0 transition-opacity duration-1000" id="simulate-scan-btn">
                 Simular Lectura de Boleto HBD
             </button>
         </div>
 
-        <!-- Pantalla del Boleto Digital / Pase de abordar VIP ultra detallado -->
+        <!-- Pantalla del Boleto Digital / Pase de abordar VIP -->
         <div id="ticket-view" class="hidden absolute inset-0 bg-blue-900 z-50 overflow-y-auto pt-8 pb-20 px-4 flex flex-col items-center min-h-screen">
-            <!-- Header Boleto -->
             <div class="w-full max-w-sm flex justify-between items-center mb-6">
                 <button onclick="showView('home-view')" class="text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition backdrop-blur-sm">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
                 <span class="text-white font-semibold text-lg tracking-wide">Pase de Abordar</span>
-                <div class="w-10"></div> <!-- Espaciador -->
+                <div class="w-10"></div>
             </div>
 
-            <!-- Contenedor Principal del Boleto -->
             <div class="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden">
-                
-                <!-- Encabezado HBD -->
                 <div class="hbd-gradient p-6 text-white text-center relative">
                     <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/30 shadow-sm">
                         ELITE (Clase V)
@@ -608,13 +589,11 @@
                     <p class="text-sm font-medium text-white/90">Vuelo Especial VIP</p>
                 </div>
 
-                <!-- Info Pasajero Completo -->
                 <div class="p-6 border-b border-gray-100 border-dashed">
                     <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">Nombre del Pasajero</p>
                     <p class="text-lg font-black text-gray-800 leading-tight">ELIZABETH DEL CARMEN MACOTELA QUIROZ</p>
                 </div>
 
-                <!-- Ruta y Horario y Avion -->
                 <div class="p-6 pb-2">
                     <div class="flex justify-between items-center mb-6">
                         <div class="text-center">
@@ -651,9 +630,7 @@
                     </div>
                 </div>
 
-                <!-- Detalles Asiento -->
                 <div class="bg-gray-50 p-6 flex justify-between items-center border-t border-gray-100 border-dashed relative mt-2">
-                    <!-- Recortes laterales estilo boleto -->
                     <div class="absolute -left-3 -top-3 w-6 h-6 bg-white rounded-full"></div>
                     <div class="absolute -right-3 -top-3 w-6 h-6 bg-white rounded-full"></div>
 
@@ -671,17 +648,14 @@
                     </div>
                 </div>
 
-                <!-- QR y Código -->
                 <div class="p-6 bg-white flex flex-col items-center justify-center">
                     <div class="bg-gray-100 p-3 rounded-2xl">
-                        <!-- Simulación de QR -->
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=HBD-ELIZABETH-MACOTELA-AM5507-10A-B787VIP" alt="QR Code" class="w-32 h-32 opacity-90 mix-blend-multiply">
                     </div>
                     <p class="text-xs text-gray-400 mt-3 font-mono tracking-widest">TK-90887123HBD55</p>
                 </div>
             </div>
 
-            <!-- Botones Extra Pase -->
             <div class="w-full max-w-sm mt-6">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 mb-4">
                     <div class="flex items-start gap-3">
@@ -727,7 +701,6 @@
             <div class="max-w-3xl mx-auto mt-8">
                 <h2 class="text-2xl font-bold text-blue-900 mb-6"><i class="fa-solid fa-suitcase mr-2"></i>Mis Viajes</h2>
                 
-                <!-- Estado Desconectado -->
                 <div id="logged-out-trips" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col items-center text-center">
                     <i class="fa-solid fa-passport text-gray-300 text-6xl mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-800">Accede a tus itinerarios</h3>
@@ -737,7 +710,6 @@
                     </button>
                 </div>
 
-                <!-- Estado Conectado (Mis Viajes Elizabeth) -->
                 <div id="logged-in-trips" class="hidden space-y-6">
                     <div class="bg-white rounded-2xl shadow-md border-l-4 border-pink-500 overflow-hidden hover:shadow-lg transition">
                         <div class="p-6">
@@ -817,7 +789,6 @@
             <div class="max-w-3xl mx-auto mt-8">
                 <h2 class="text-2xl font-bold text-blue-900 mb-6"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Rastreador de Vuelo</h2>
                 
-                <!-- Estado Desconectado -->
                 <div id="logged-out-status" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col items-center text-center">
                     <i class="fa-solid fa-plane-slash text-gray-300 text-6xl mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-800">Rastrea tu itinerario</h3>
@@ -827,7 +798,6 @@
                     </button>
                 </div>
 
-                <!-- Estado Conectado -->
                 <div id="logged-in-status" class="hidden bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                     <div class="bg-gradient-to-r from-pink-500 to-purple-600 p-6 text-white flex justify-between items-center">
                         <div>
@@ -843,10 +813,8 @@
                     
                     <div class="p-8">
                         <div class="relative">
-                            <!-- Línea base del timeline -->
                             <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform md:-translate-x-1/2"></div>
                             
-                            <!-- Paso 1: Documentación -->
                             <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between mb-10 pl-16 md:pl-0">
                                 <div class="md:w-5/12 md:text-right md:pr-8 mb-2 md:mb-0 hidden md:block">
                                     <h4 class="font-bold text-gray-800 text-lg">Check-in</h4>
@@ -861,7 +829,6 @@
                                 </div>
                             </div>
 
-                            <!-- Paso 2: Abordaje -->
                             <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between mb-10 pl-16 md:pl-0">
                                 <div class="md:w-5/12 md:text-right md:pr-8 mb-2 md:mb-0 hidden md:block">
                                     <h4 class="font-bold text-pink-600 text-lg">Abordaje Activo</h4>
@@ -877,7 +844,6 @@
                                 </div>
                             </div>
 
-                            <!-- Paso 3: Despegue -->
                             <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-16 md:pl-0">
                                 <div class="md:w-5/12 md:text-right md:pr-8 mb-2 md:mb-0 hidden md:block">
                                     <h4 class="font-bold text-gray-400 text-lg">Despegue</h4>
@@ -927,12 +893,10 @@
     </div>
 
 <script>
-    // DOM Elements
     const hbdModal = document.getElementById('hbd-modal');
     const genericModal = document.getElementById('generic-flight-modal');
     let scanTimeout;
 
-    // Base de datos de información extra por destino
     const flightDetailsExtra = {
         'CUN': {
             desc: 'Prepárate para disfrutar de las espectaculares playas de arena blanca y el mar turquesa del Caribe Mexicano. Clima esperado al aterrizar: 28°C, Soleado.',
@@ -971,7 +935,6 @@
         }
     };
 
-    // Estado de Sesión Simulado
     let isLoggedIn = false;
 
     // Funciones del Menú Móvil
@@ -982,6 +945,7 @@
         }
     }
 
+    // Modal Login
     function openLoginModal() {
         document.getElementById('login-modal').classList.remove('hidden');
     }
@@ -994,7 +958,6 @@
         isLoggedIn = true;
         closeLoginModal();
         updateUIForLoginState();
-        // Refresca la vista actual si está en Mis Viajes o Estado
         const tripsView = document.getElementById('trips-view');
         const statusView = document.getElementById('status-view');
         if(tripsView && !tripsView.classList.contains('hidden')) showView('trips-view');
@@ -1004,7 +967,7 @@
     function doLogout() {
         isLoggedIn = false;
         updateUIForLoginState();
-        showView('home-view'); // Regresa al inicio al cerrar sesión
+        showView('home-view');
     }
 
     function updateUIForLoginState() {
@@ -1015,22 +978,17 @@
         const btnHbdUnbooked = document.getElementById('btn-hbd-unbooked');
         const btnHbdBooked = document.getElementById('btn-hbd-booked');
 
-        // Elementos Desktop
         const navLoginBtn = document.getElementById('nav-login-btn');
         const navUserProfile = document.getElementById('nav-user-profile');
-        
-        // Elementos Mobile
         const mobileLoginBtn = document.getElementById('mobile-login-btn');
         const mobileUserProfile = document.getElementById('mobile-user-profile');
 
         const loggedOutTrips = document.getElementById('logged-out-trips');
         const loggedInTrips = document.getElementById('logged-in-trips');
-        
         const loggedOutStatus = document.getElementById('logged-out-status');
         const loggedInStatus = document.getElementById('logged-in-status');
 
         if (isLoggedIn) {
-            // Estado: Conectado
             if(hbdUnbookedInfo) hbdUnbookedInfo.classList.add('hidden');
             if(hbdBookedInfo) hbdBookedInfo.classList.remove('hidden');
             if(modalHbdUnbooked) modalHbdUnbooked.classList.add('hidden');
@@ -1051,11 +1009,9 @@
 
             if(loggedOutTrips) loggedOutTrips.classList.add('hidden');
             if(loggedInTrips) loggedInTrips.classList.remove('hidden');
-            
             if(loggedOutStatus) loggedOutStatus.classList.add('hidden');
             if(loggedInStatus) loggedInStatus.classList.remove('hidden');
         } else {
-            // Estado: Desconectado
             if(hbdUnbookedInfo) hbdUnbookedInfo.classList.remove('hidden');
             if(hbdBookedInfo) hbdBookedInfo.classList.add('hidden');
             if(modalHbdUnbooked) modalHbdUnbooked.classList.remove('hidden');
@@ -1076,7 +1032,6 @@
 
             if(loggedOutTrips) loggedOutTrips.classList.remove('hidden');
             if(loggedInTrips) loggedInTrips.classList.add('hidden');
-            
             if(loggedOutStatus) loggedOutStatus.classList.remove('hidden');
             if(loggedInStatus) loggedInStatus.classList.add('hidden');
         }
@@ -1152,6 +1107,30 @@
         }
         
         window.scrollTo(0,0);
+    }
+
+    function executeFlightSearch() {
+        const select = document.getElementById('flight-search-dest');
+        const btn = document.getElementById('btn-buscar-vuelos');
+        
+        if(!select || select.value === "") {
+            btn.classList.add('border-red-400', 'text-red-200');
+            btn.classList.remove('border-transparent');
+            setTimeout(() => {
+                btn.classList.remove('border-red-400', 'text-red-200');
+                btn.classList.add('border-transparent');
+            }, 1500);
+            return;
+        }
+
+        if (select.value === 'HBD') openHbdModal();
+        else if (select.value === 'CUN') openFlightModal('CUN', 'Cancún', 'AM102', '30 de Noviembre', '09:00', '08:20', 'Boeing 737 MAX', '14-B', '1 Maleta (25kg)');
+        else if (select.value === 'MAD') openFlightModal('MAD', 'Madrid', 'IB6400', '10 de Diciembre', '19:30', '18:40', 'Airbus A350', '22-C', '1 Maleta (25kg)');
+        else if (select.value === 'NRT') openFlightModal('NRT', 'Tokio', 'AM058', '27 de Noviembre', '23:30', '22:40', 'Boeing 787 Dreamliner', '15-J', '2 Maletas (23kg c/u)');
+        else if (select.value === 'CDG') openFlightModal('CDG', 'París', 'AM003', '20 de Diciembre', '22:00', '21:10', 'Boeing 787 Dreamliner', '18-J', '1 Maleta (25kg)');
+        else if (select.value === 'JFK') openFlightModal('JFK', 'Nueva York', 'AM404', '05 de Diciembre', '07:45', '06:50', 'Boeing 737 MAX', '12-F', '1 Maleta (23kg)');
+        else if (select.value === 'FCO') openFlightModal('FCO', 'Roma', 'AM070', '15 de Diciembre', '18:15', '17:25', 'Boeing 787 Dreamliner', '25-A', '1 Maleta (25kg)');
+        else if (select.value === 'SYD') openFlightModal('SYD', 'Sídney', 'AM092', '05 de Enero', '23:55', '23:05', 'Airbus A350', '14-J', '2 Maletas (23kg c/u)');
     }
 
     function startScanning() {
@@ -1234,31 +1213,5 @@
     function simulateScanHbdDirect() {
         closeHbdModal();
         showView('ticket-view');
-    }
-
-    function executeFlightSearch() {
-        const select = document.getElementById('flight-search-dest');
-        const btn = document.getElementById('btn-buscar-vuelos');
-        
-        // Si no selecciona nada, pinta el borde de rojo por 1 segundo
-        if(!select || select.value === "") {
-            btn.classList.add('border-red-400', 'text-red-200');
-            btn.classList.remove('border-transparent');
-            setTimeout(() => {
-                btn.classList.remove('border-red-400', 'text-red-200');
-                btn.classList.add('border-transparent');
-            }, 1500);
-            return;
-        }
-
-        // Abre la ventana correcta según lo que se elija
-        if (select.value === 'HBD') openHbdModal();
-        else if (select.value === 'CUN') openFlightModal('CUN', 'Cancún', 'AM102', '30 de Noviembre', '09:00', '08:20', 'Boeing 737 MAX', '14-B', '1 Maleta (25kg)');
-        else if (select.value === 'MAD') openFlightModal('MAD', 'Madrid', 'IB6400', '10 de Diciembre', '19:30', '18:40', 'Airbus A350', '22-C', '1 Maleta (25kg)');
-        else if (select.value === 'NRT') openFlightModal('NRT', 'Tokio', 'AM058', '27 de Noviembre', '23:30', '22:40', 'Boeing 787 Dreamliner', '15-J', '2 Maletas (23kg c/u)');
-        else if (select.value === 'CDG') openFlightModal('CDG', 'París', 'AM003', '20 de Diciembre', '22:00', '21:10', 'Boeing 787 Dreamliner', '18-J', '1 Maleta (25kg)');
-        else if (select.value === 'JFK') openFlightModal('JFK', 'Nueva York', 'AM404', '05 de Diciembre', '07:45', '06:50', 'Boeing 737 MAX', '12-F', '1 Maleta (23kg)');
-        else if (select.value === 'FCO') openFlightModal('FCO', 'Roma', 'AM070', '15 de Diciembre', '18:15', '17:25', 'Boeing 787 Dreamliner', '25-A', '1 Maleta (25kg)');
-        else if (select.value === 'SYD') openFlightModal('SYD', 'Sídney', 'AM092', '05 de Enero', '23:55', '23:05', 'Airbus A350', '14-J', '2 Maletas (23kg c/u)');
     }
 </script>
